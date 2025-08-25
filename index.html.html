@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Earth Villas • Nasrapur, Karjat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Poppins:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#2E7D32; /* brand */
+      --green-50:#E8F5E9; /* light pista bg */
+      --gold:#FF9800;    /* accent */
+      --blue:#1565C0;    /* trust */
+      --ink:#212121;     /* body text */
+      --card:#ffffff;    /* cards */
+      --muted:#5f6368;   /* muted */
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--green-50);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--blue);text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:20px}
+    header{
+      position:sticky;top:0;z-index:10;background:rgba(232,245,233,.9);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid #d7e9d9
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#3fa34d, #2E7D32);color:#fff;box-shadow:var(--shadow)}
+    .brand h1{font-family:Montserrat,Inter,sans-serif;margin:0;font-size:1.15rem;letter-spacing:.2px}
+    .cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#111;padding:10px 16px;border-radius:999px;font-weight:600;box-shadow:var(--shadow)}
+
+    /* Hero */
+    .hero{padding:36px 0 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .hero h2{font-family:Montserrat,Inter,sans-serif;margin:.2rem 0;color:#103b15;font-weight:800;font-size:2.4rem;line-height:1.1}
+    .hero p.sub{font-family:Poppins,Inter,sans-serif;margin:8px 0 16px;font-size:1.05rem;color:#274c2e}
+    .hero .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:#fff;border:1px solid #dfeadf;border-radius:999px;padding:8px 12px;display:inline-flex;align-items:center;gap:8px;font-weight:600}
+    .heroimg{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#dfeadf}
+    .heroimg img{width:100%;height:100%;object-fit:cover;display:block}
+    .corner{position:absolute;inset:auto 12px 12px auto;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:var(--shadow);font-weight:700}
+
+    /* Features */
+    .section{padding:26px 0}
+    .section h3{font-family:Montserrat,Inter,sans-serif;font-size:1.6rem;margin:0 0 16px;color:#103b15}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .feature{background:var(--card);border-radius:var(--radius);padding:16px;display:flex;gap:12px;align-items:flex-start;border:1px solid #e8efe9;box-shadow:var(--shadow)}
+    .icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#f2faf3}
+    .feature h4{margin:0 0 4px;font-size:1.02rem}
+    .feature p{margin:0;color:var(--muted);font-size:.94rem}
+
+    /* Payment plan timeline */
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .step{background:#fff;border:1px solid #ffe0b2;padding:14px;border-radius:16px;box-shadow:var(--shadow)}
+    .step .pct{font-family:Montserrat,sans-serif;color:#a85d00;font-weight:800;font-size:1.1rem}
+    .step .txt{color:#6b4c00;font-weight:600}
+
+    /* Location */
+    .location{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+    .map{border-radius:18px;overflow:hidden;border:1px solid #e2e8f0;box-shadow:var(--shadow)}
+    iframe{width:100%;height:320px;border:0}
+
+    /* CTA band */
+    .band{background:#103b15;color:#e6ffe8;border-radius:18px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:var(--shadow)}
+    .band b{color:#c6ffd0}
+
+    footer{padding:28px 0 36px;color:#355b39;font-size:.95rem}
+    .contacts{display:flex;gap:16px;flex-wrap:wrap}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #d7e9d9;border-radius:999px;padding:10px 14px;box-shadow:var(--shadow)}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero,.location{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 560px){
+      .features{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr}
+      .hero h2{font-size:1.9rem}
+    }
+  </style>
+</head>
+<body>
+ <!-- Header -->
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">
+        <img src="images/greenearthvillalogo.png" 
+             alt="Green Earth Villas Logo" 
+             width="40" height="40">
+      </div>
+      <h1>Green Earth Villas</h1>
+    </div>
+    <a class="cta" 
+       href="https://wa.me/919930290126?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20plot%20at%20Green%20Earth%20Villas." 
+       target="_blank">
+      📲 Book a Plot
+    </a>
+  </div>
+</header>
+
+
+  <!-- Hero -->
+  <section class="container hero">
+    <div>
+      <h2>Your Own Villa in Nature – Nasrapur, Karjat</h2>
+      <p class="sub">Second home, first choice. Luxury that blends with greenery, peace and smart amenities.</p>
+      <div class="badges">
+        <span class="badge">Only <b>10</b> NA plots</span>
+        <span class="badge">Loan Facility</span>
+        <span class="badge">Free Site Visit</span>
+      </div>
+    </div>
+    <div class="heroimg" aria-label="Villa with pool">
+      <!-- Replace the image src with your final file if needed -->
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop" alt="Modern villa with swimming pool" />
+      <div class="corner">Nasrapur, Karjat</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container section" id="features">
+    <h3>Highlights & Amenities</h3>
+    <div class="features">
+      <!-- 10 NA Plots -->
+      <article class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 11l9-7 9 7v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8Z" stroke="#2E7D32" stroke-width="2"/>
+          </svg>
+        </div>
+        <div>
+          <h4>10 NA Plots</h4>
+          <p>Sizes from <b>1500–2500 sq. ft.</b></p>
+        </div>
+      </article>
+
+      <!-- Swimming Pool -->
+      <article class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 17c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h4>10 × 15 Pool</h4>
+          <p>Private swimming pool for each bungalow.</p>
+        </div>
+      </article>
+
+      <!-- Electricity + Water -->
+      <article class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2v8l6 2-6 10v-8l-6-2 6-10Z" fill="#2E7D32"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Electricity & Water</h4>
+          <p>Metered electricity and water connection ready.</p>
+        </div>
+      </article>
+
+      <!-- CCTV + WiFi -->
+      <article class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 10h10l6 3-6 3H4v-6Z" stroke="#2E7D32" stroke-width="2"/>
+            <circle cx="7" cy="13" r="1.4" fill="#2E7D32"/>
+          </svg>
+        </div>
+        <div>
+          <h4>CCTV + Wi‑Fi</h4>
+          <p>Smart surveillance & connectivity.</p>
+        </div>
+      </article>
+
+      <!-- RCC Compound + Inverter Backup -->
+      <article class="feature">
+        <div class="icon" aria-hidden="true">
+          <!-- Brick wall + bolt icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="6" width="6" height="3" rx="1" fill="#2E7D32"/>
+            <rect x="11" y="6" width="10" height="3" rx="1" fill="#2E7D32"/>
+            <rect x="3" y="11" width="10" height="3" rx="1" fill="#2E7D32"/>
+            <rect x="15" y="11" width="6" height="3" rx="1" fill="#2E7D32"/>
+            <rect x="3" y="16" width="6" height="3" rx="1" fill="#2E7D32"/>
+            <rect x="11" y="16" width="10" height="3" rx="1" fill="#2E7D32"/>
+            <path d="M13 6l-2 5h3l-3 7" stroke="#0b4a12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h4>RCC Compound & Power Backup</h4>
+          <p>Reinforced boundary walls + inverter backup.</p>
+        </div>
+      </article>
+
+      <!-- 24/7 Security & Maintenance -->
+      <article class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3l8 3v5c0 4-3 7-8 9-5-2-8-5-8-9V6l8-3Z" stroke="#2E7D32" stroke-width="2"/>
+            <path d="M9.5 12.5l2 2 3-3" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h4>24/7 Security & Maintenance*</h4>
+          <p>Peace of mind with round‑the‑clock support.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Payment Plan -->
+  <section class="container section" id="payment">
+    <h3>Payment Plan</h3>
+    <div class="timeline">
+      <div class="step">
+        <div class="pct">50%</div>
+        <div class="txt">Advance for registration & commencement</div>
+      </div>
+      <div class="step">
+        <div class="pct">20%</div>
+        <div class="txt">On completion of RCC structure</div>
+      </div>
+      <div class="step">
+        <div class="pct">20%</div>
+        <div class="txt">On completion of bungalow & pool</div>
+      </div>
+      <div class="step">
+        <div class="pct">10%</div>
+        <div class="txt">On handover – lock & key</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+<section class="container section" id="location">
+  <h3>Location</h3>
+  <div class="location">
+    <div>
+      <p>Project Site: <b>Nasrapur, Karjat</b></p>
+      <p class="muted">Calm, green surroundings – an easy weekend getaway and a smart investment.</p>
+      <div class="band" style="margin-top:10px">
+        <span>Limited to <b>10 exclusive plots</b>. Book your site visit now.</span>
+        <a class="cta" 
+           href="https://wa.me/919930290126?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20site%20visit%20for%20the%20Karjat%20project." 
+           target="_blank">
+          📲 Book Visit on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe loading="lazy" allowfullscreen
+        src="https://www.google.com/maps?q=Nasrapur,%20Karjat&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <footer id="contact">
+    <div class="container">
+      <h3 style="font-family:Montserrat,Inter,sans-serif;color:#103b15;margin:0 0 12px">Contact</h3>
+      <div class="contacts">
+        <a class="pill" href="tel:+919011664743" aria-label="Call Ketan Gawde">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.46-1.09a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z" stroke="#2E7D32" stroke-width="2"/></svg>
+          <b>Ketan Gawde</b> • +91 9011664743
+        </a>
+        <a class="pill" href="tel:+919930290126" aria-label="Call Sajid Khan">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.46-1.09a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z" stroke="#2E7D32" stroke-width="2"/></svg>
+          <b>Sajid Khan</b> • +91 9930290126
+        </a>
+        <a class="pill" href="https://wa.me/919011664743" target="_blank" rel="noreferrer">
+          <!-- WhatsApp icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 11.5A8.5 8.5 0 1 1 7.4 3.4 8.5 8.5 0 0 1 20 11.5Z" stroke="#2E7D32" stroke-width="2"/><path d="M8.5 19l-2.2.6.6-2.3" stroke="#2E7D32" stroke-width="2" stroke-linecap="round"/><path d="M9.5 7.5c.6-1.1 1.9-.7 2.2 0 .3.6.1 1.2-.2 1.6-.4.5-.3 1.1.1 1.5l1.1 1.1c.4.4 1 .5 1.5.1.4-.3 1-.5 1.6-.2.7.3 1.1 1.6 0 2.2-1.2.7-2.7.7-4-.2-1.3-.9-2.4-2.1-3.3-3.3-.9-1.3-.9-2.8-.2-4Z" fill="#2E7D32"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <p style="margin-top:14px;color:#5f7b60">*Maintenance charges apply.</p>
+    </div>
+  </footer>
+</body>
+</html>
